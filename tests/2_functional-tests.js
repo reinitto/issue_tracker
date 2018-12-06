@@ -80,7 +80,7 @@ suite('Functional Tests', function() {
           .send({})
         .end(function(err, res){
          assert.equal(res.status, 200);
-        assert.equal(res.body.error, "no updated field sent")
+        assert.equal(res.text, "no updated field sent")
           
           done()
 
@@ -95,7 +95,7 @@ suite('Functional Tests', function() {
                   issue_text: "SOme other text that im updateing using PUT"})
         .end(function(err, res){
          assert.equal(res.status, 200);
-        assert.equal(res.body.text, "Succesfully updated")
+        assert.equal(res.text, "Succesfully updated")
           
           done()
 
@@ -111,7 +111,7 @@ suite('Functional Tests', function() {
                 })
         .end(function(err, res){
          assert.equal(res.status, 200);
-        assert.equal(res.body.text, "Succesfully updated")
+        assert.equal(res.text, "Succesfully updated")
           
           done()
 
@@ -194,7 +194,7 @@ suite('Functional Tests', function() {
                 })
         .end(function(err, res){
          assert.equal(res.status, 200);
-        assert.equal(res.body.error, "No id provided")
+        assert.equal(res.text, "No id provided")
           
           done()
 
@@ -206,11 +206,11 @@ suite('Functional Tests', function() {
        chai.request(server)
           .delete('/api/issues/test')
         //this _id is already deleted, create a new one to test
-          .send({_id: "5c0917c6b43b483aae6c2966"
+          .send({_id: "5c0938ec403de62023e551fb"
                 })
         .end(function(err, res){
-         assert.equal(res.status, 200);
-        assert.equal(res.body.success, "Issue deleted and forgotten about")
+        assert.equal(res.status, 200);
+        assert.equal(res.text, "Issue deleted and forgotten about")
           
           done()
 

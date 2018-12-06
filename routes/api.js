@@ -46,7 +46,7 @@ module.exports = function (app) {
     .get(function (req, res){
      
   Issue.find(req.params, "-project",(err, doc)=>{
-      if(err) res.json({error: 'Project does not exist'})
+      if(err) res.send('Project does not exist')
       else{
           res.json(doc)
       }
@@ -82,7 +82,7 @@ module.exports = function (app) {
     var props = {...req.body};
     delete props._id 
        if(!hasProps(props)){ 
-         res.status(200).json({error: "no updated field sent"})
+         res.send("no updated field sent")
         } else {
     var nonEmptyProps = {}
     for(var i in props){
@@ -90,9 +90,9 @@ module.exports = function (app) {
     }
     nonEmptyProps.updated_on = Date.now()
     Issue.findOneAndUpdate({_id: id},nonEmptyProps,{new:true}, (err,doc)=>{
-      if(err) res.status(200).type('text').send('Could not find ' + id)
+      if(err) res.send('Could not find ' + id)
         else {
-          res.status(200).json({text: "Succesfully updated"})
+          res.send("Succesfully updated")
         }
       } )
     }
@@ -102,13 +102,14 @@ module.exports = function (app) {
     .delete(function (req, res){
       var project = req.params.project;
       var id = req.body._id
-      if(!id){res.json({error: "No id provided"})}
+      if(!id){res.send( "No id provided")}
         else {
       Issue.findByIdAndDelete(id, (err)=>{
       if(err) {
-        res.status(200).json({error: "User not Found"})}
+        res.send("User not Found")}
         else {
-          res.status(200).json({success:"Issue deleted and forgotten about"})
+          res.send("Issue deleted and forgotten about")
+         // res.status(200).json({success:"Issue deleted and forgotten about"})
         }
       })
       }
