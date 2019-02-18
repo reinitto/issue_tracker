@@ -1,0 +1,136 @@
+#indexPage {
+  padding: 0px;
+  margin: 0px;
+  // width: 100%;
+  // height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "head head"
+    " api userstories";
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  position: relative;
+}
+body:before {
+  z-index: -1;
+  position: absolute;
+  background-image: url("https://www.lifewire.com/thmb/Xv46v01Hx4RggCXtKzgknlov9D4=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/modern-office-buildings-forming-part-of-the-greenwich-peninsula-regeneration--south-east-london--uk-976027256-5b9047ddc9e77c0050b5d0e6.jpg");
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+
+h2,
+h3 {
+  display: block;
+  text-align: center;
+}
+
+header {
+  grid-area: head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#userstories {
+  grid-area: userstories;
+  display: flex;
+  flex-direction: column;
+  ///  padding: 10px;
+
+  ol {
+    list-style-type: upper-roman;
+    li {
+      padding: 10px;
+    }
+  }
+}
+
+#testui {
+  grid-area: api;
+  //  padding: 10px;
+}
+
+textarea,
+input[type] {
+  width: max(400px);
+  height: 30px;
+  border-radius: 20%;
+  margin: 10px;
+}
+input[type="checkbox"] {
+  height: 50px;
+}
+label {
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+button {
+  border-radius: 50%;
+  border-color: black;
+  border-width: 5px;
+  height: 100px;
+  width: 100px;
+}
+
+.submitbtn {
+  background-color: green;
+}
+
+#delbtn {
+  background-color: red;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#jsonResult {
+  width: max(100%);
+  position: absolute;
+  top: 100px;
+  background-color: black;
+  color: green;
+  transition: 1s linear ease-in;
+}
+code {
+  font-family: Courier, "New Courier", monospace;
+  font-size: 18px;
+}
+
+.issue {
+  border: black 5px dashed;
+  margin: 10px 0px;
+}
+
+.open {
+  background-color: limegreen;
+}
+
+#issuePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
