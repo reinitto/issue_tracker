@@ -25,7 +25,7 @@ body {
 body:before {
   z-index: -1;
   position: absolute;
-  background-image: url("./public/assets/background-img.jpg");
+  background-image: url("/public/assets/background-img.jpg");
   content: "";
   display: block;
   top: 0;
