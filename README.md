@@ -4,7 +4,7 @@
 Project Issue Tracker
 
 1) __npm i__ to install dependencies
-2) create __.env__ file and set __DB__ string and __NODEOENV__ var
+2) create __.env__ file and set __DB__ string and __NODE_ENV__ var
 3) __npm start__ to start the server
 
 Testing
