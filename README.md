@@ -3,9 +3,11 @@
 
 Project Issue Tracker
 
-1) SET NODE_ENV to `test` without quotes and set DB to your mongo connection string in .env file
-2) Complete the project in `routes/api.js` or by creating a handler/controller
-3) You will add any security features to `server.js`
-4) You will create all of the functional tests in `tests/2_functional-tests.js`
+1) __npm i__ to install dependencies
+2) create __.env__ file and set __DB__ string and __NODE_ENV__ var
+3) __npm start__ to start the server
 
+Testing
+1) set __NODE_ENV__ to __TEST__ environment 
+2) run __npm start__ to run tests
 
