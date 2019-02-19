@@ -1,17 +1,7 @@
-/*
- *
- *
- *       Complete the API routing below
- *
- *
- */
-
 "use strict";
-
-var expect = require("chai").expect;
+require("dotenv").config();
 var mongoose = require("mongoose");
-const CONNECTION_STRING =
-  "mongodb://admin:123qwe@ds127704.mlab.com:27704/stock-prices";
+const CONNECTION_STRING = process.env.DB;
 const db = mongoose.connect(
   CONNECTION_STRING,
   { useNewUrlParser: true },

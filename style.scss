@@ -55,6 +55,7 @@ header {
   flex-direction: column;
   ///  padding: 10px;
 
+  transition: all 2s ease-in;
   ol {
     list-style-type: upper-roman;
     li {
@@ -74,6 +75,19 @@ input[type] {
   height: 30px;
   border-radius: 20%;
   margin: 10px;
+}
+textarea:required,
+input:required {
+  box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
+}
+textarea:required:focus,
+input:required:focus {
+  border: 1px solid red;
+  box-shadow: none;
+}
+textarea:required:valid,
+input:required:valid {
+  box-shadow: 4px 4px 20px rgba(0, 200, 0, 0.85);
 }
 input[type="checkbox"] {
   height: 50px;

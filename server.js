@@ -8,7 +8,7 @@ var helmet = require("helmet");
 var apiRoutes = require("./routes/api.js");
 var fccTestingRoutes = require("./routes/fcctesting.js");
 var runner = require("./test-runner");
-
+const PORT = process.env.PORT || 3000;
 var app = express();
 
 app.use("/public", express.static(process.cwd() + "/public"));
@@ -45,8 +45,8 @@ app.use(function(req, res, next) {
 });
 
 //Start our server and tests!
-app.listen(3000, function() {
-  console.log("Listening on port " + 3000);
+app.listen(PORT || 3000, function() {
+  console.log("Listening on port " + PORT || 3000);
   if (process.env.NODE_ENV === "test") {
     console.log("Running Tests...");
     setTimeout(function() {
