@@ -178,6 +178,10 @@ code {
   background-color: limegreen;
 }
 
+.closed {
+  background-color: darkgray;
+}
+
 #issuePage {
   display: -webkit-box;
   display: -ms-flexbox;
