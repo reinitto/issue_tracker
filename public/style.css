@@ -25,7 +25,7 @@ body {
 body:before {
   z-index: -1;
   position: absolute;
-  background-image: url("https://www.lifewire.com/thmb/Xv46v01Hx4RggCXtKzgknlov9D4=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/modern-office-buildings-forming-part-of-the-greenwich-peninsula-regeneration--south-east-london--uk-976027256-5b9047ddc9e77c0050b5d0e6.jpg");
+  background-image: url("./public/assets/background-img.jpg");
   content: "";
   display: block;
   top: 0;
